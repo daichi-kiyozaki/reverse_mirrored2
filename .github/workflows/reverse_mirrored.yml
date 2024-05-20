@@ -1,0 +1,20 @@
+name: Mirror CodeCommit to GitHub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  clone_codecommit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: clone from codecommit
+     run: |
+      cd ~
+      clone ssh://git-codecommit.us-east-2.amazonaws.com/v1/repos/mirrored_2 clone_work_test
+
+
+
+
+
